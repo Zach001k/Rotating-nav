@@ -1,0 +1,109 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+    background-image: url(photo/oskar.jpg);
+    color: #222;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+
+}
+.container{
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform .5s linear;
+}
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left:-100px;
+
+}
+.circle{
+    background-color: #ff797979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform .5s linear;
+}
+  .container .container.show-nav .circle{
+      transform: rotate(-70deg);
+  }
+   .circle button {
+     position:absolute;
+     top: 50%;
+     left: 50%;
+     height: 100px;
+     background: transparent;
+     font-size: 20px;
+     border: 0;
+     color: #fff;
+
+ }
+ .container.show-nav + nav li{
+     transform: translate(0);
+     transition-delay: 0.4s;
+ }
+ .circle button:focus{
+     outline: none;
+
+ }
+ nav{
+     position: fixed;
+     bottom: 40px;
+     left: 0;
+     z-index: 100;
+
+ }
+ nav ul{
+list-style-type: none;
+padding-left: 20px;
+ }
+ nav ul li{
+     text-transform: uppercase;
+     margin: 40px 0;
+     color: #fff;
+     transform: translate(-100%);
+     transition: tranform 0.5s ease-in;
+ }
+ nav ul li + li {
+    margin-left:15px;
+    transform: translate(-150%);
+}
+
+ nav ul li + li + li{
+     margin-left:30px;
+     transform: translate(-200%);
+ }
+ .circle button#open{
+     left: 60%;
+ }
+ .circle button#close{
+     top: 60%;
+     transition: rotate(90deg);
+     transform-origin:top left;
+
+ }
+ .content img {
+     max-width: 40% ;
+  
+ }
+ .content{
+     max-width: 1000px;
+     margin :50;
+ }
+  .content h1{
+      margin: 0;
+  }
+  .content small{
+      color: #555;
+      font-style: italic;
+  }
+  .content p {
+      color: #333;
+      line-height: 1.5;
+  }
